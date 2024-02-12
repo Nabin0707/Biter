@@ -231,7 +231,6 @@ export const portfolios = [
     gitlink: "https://github.com/BitBrain19/Foody.git",
     viewlink: "https://foody-bit-er.netlify.app/",
   },
-
 ];
 // Our team
 export var teams = [

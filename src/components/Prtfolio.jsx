@@ -18,42 +18,34 @@ const Prtfolio = () => {
   };
   const settings = {
     dots: true,
-    
+    slidesToShow: Math.min(3, portfolios.length), // Display minimum of 3 or the number of portfolios available
+    slidesToScroll: Math.min(3, portfolios.length), // Scroll minimum of 3 or the number of portfolios available
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Adjusted to at least 5 items initially
-    slidesToScroll: 1,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 4000, // Set the autoplay speed in milliseconds (adjust as needed)
+    autoplay: true,
+    autoplaySpeed: 4000,
     ease: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)',
     cssEase: 'cubic-bezier(0.68, -0.55, 0.27, 1.55)',
     responsive: [
       {
         breakpoint: 1400,
         settings: {
-          slidesToShow: 5,
-          slidesToScroll: 3,
+          slidesToShow: Math.min(5, portfolios.length), // Adjust as needed
+          slidesToScroll: Math.min(3, portfolios.length), // Adjust as needed
         },
       },
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 2,
+          slidesToShow: Math.min(4, portfolios.length), // Adjust as needed
+          slidesToScroll: Math.min(2, portfolios.length), // Adjust as needed
         },
       },
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToShow: Math.min(2, portfolios.length), // Adjust as needed
+          slidesToScroll: Math.min(1, portfolios.length), // Adjust as needed
         },
       },
       {
@@ -62,7 +54,6 @@ const Prtfolio = () => {
           slidesToShow: 1,
         },
       },
-      
     ],
   };
   return (
